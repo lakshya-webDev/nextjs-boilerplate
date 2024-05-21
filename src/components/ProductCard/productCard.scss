@@ -1,0 +1,116 @@
+@import "../../styles/mixins.scss";
+
+.product-listing {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    align-items: center;
+    gap: 2rem;
+
+    .card {
+        position: relative;
+        display: flex;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        cursor: pointer;
+
+        .card__img {
+            width: 180px;
+            height: auto;
+            padding: 3rem 0;
+            transition: .5s;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .card__name {
+            position: absolute;
+            left: -25%;
+            top: 0;
+            width: 3.5rem;
+            height: 100%;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            text-align: center;
+            background-color: $dark-secondary-color;
+            color: $white-color;
+            font-weight: bold;
+            transition: .5s;
+
+            p {
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+            }
+        }
+
+        .card__icon {
+            font-size: 1.5rem;
+            color: $dark-secondary-color;
+        }
+
+        .card__icon:hover {
+            color: $accent-color;
+        }
+
+        .card__precis {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            transition: .5s;
+        }
+
+        .card__preci {
+            display: block;
+            text-align: center;
+        }
+
+        .card__preci--before {
+            font-size: var(--smaller-font-size);
+            color: $accent-color;
+            margin-bottom: .25rem;
+        }
+
+        .card__preci--now {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Move left */
+    }
+
+    .card:hover {
+        box-shadow: 0 .5rem 1rem $secondary-light-color;
+    }
+
+    .card:hover .card__name {
+        left: 0;
+    }
+
+    .card:hover .card__img {
+        transform: rotate(30deg);
+        margin-left: 3.5rem;
+    }
+
+    .card:hover .card__precis {
+        margin-left: 3.5rem;
+        padding: 0 1.5rem;
+    }
+
+    article:nth-child(even) {
+        background-color: $light-secondary-color;
+    }
+
+    article:nth-child(odd) {
+        background-color: $secondary-light-color;
+    }
+}

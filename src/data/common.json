@@ -1,0 +1,89 @@
+{
+    "header": {
+        "logo": "Shopping Cart",
+        "navItems": [
+            {
+                "id": 1,
+                "link": "/",
+                "label": "Home"
+            },
+            {
+                "id": 2,
+                "link": "/products",
+                "label": "Products"
+            },
+            {
+                "id": 3,
+                "link": "/server-page",
+                "label": "Server Page"
+            },
+            {
+                "id": 4,
+                "link": "/client-page",
+                "label": "Client Page"
+            }
+        ]
+    },
+    "footer": {
+        "logo": "Shopping Cart",
+        "quickLinks": {
+            "title": "Quick Links:",
+            "items": [
+                {
+                    "id": 1,
+                    "link": "/",
+                    "label": "Home"
+                },
+                {
+                    "id": 2,
+                    "link": "/products",
+                    "label": "Products"
+                },
+                {
+                    "id": 3,
+                    "link": "/server-page",
+                    "label": "Server Page"
+                },
+                {
+                    "id": 4,
+                    "link": "/client-page",
+                    "label": "Client Page"
+                }
+            ]
+        },
+        "socialLinks": {
+            "title": "Social Links:",
+            "items": [
+                {
+                    "id": 1,
+                    "link": {
+                        "href": "https://facebook.com",
+                        "target": "_blank"
+                    },
+                    "label": "Facebook"
+                },
+                {
+                    "id": 2,
+                    "link": {
+                        "href": "https://twitter.com",
+                        "target": "_blank"
+                    },
+                    "label": "Twitter"
+                },
+                {
+                    "id": 3,
+                    "link": {
+                        "href": "https://instagram.com",
+                        "target": "_blank"
+                    },
+                    "label": "Instagram"
+                }
+            ]
+        },
+        "contactSection": {
+            "title": "Contact Us:",
+            "email": "Email: info@productcart.com",
+            "phone": "Phone: (123) 456-7890"
+        }
+    }
+}

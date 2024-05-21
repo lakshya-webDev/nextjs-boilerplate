@@ -71,3 +71,67 @@ a {
 .client-component {
     padding: 2rem 0;
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $light-primary-color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $dark-primary-color;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.full-screen-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.app-loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(0deg, rgba($dark-primary-color, 0.2) 33%, rgba($dark-primary-color, 1) 100%);
+    animation: rotation 1s linear infinite;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 48px - 4px;
+        height: 48px - 4px;
+        border-radius: 50%;
+        background: $dark-primary-color;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
