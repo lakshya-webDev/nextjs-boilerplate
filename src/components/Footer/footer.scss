@@ -1,0 +1,86 @@
+@import "../../styles/mixins.scss";
+
+.footer {
+    background: $light-secondary-color;
+    color: $secondary-dark-color;
+    padding: 2rem 0 0;
+    text-align: center;
+
+    .footer-container {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    .footer-logo {
+        font-family: $font-family-old-standard-bold;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+
+        @include mobile {
+            margin-bottom: 0;
+        }
+    }
+
+    .footer-links {
+        text-align: start;
+
+        ul {
+            padding-top: 1rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin-bottom: 0.5rem;
+
+                @include mobile {
+                    display: inline;
+                    margin-right: 1rem;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $secondary-dark-color;
+
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-social {
+        text-align: start;
+
+        a {
+            margin: 0 0.5rem;
+            text-decoration: none;
+            color: $dark-secondary-color;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+
+    .footer-contact {
+        text-align: start;
+
+        p {
+            margin: 0.5rem 0;
+        }
+    }
+
+    .copyright-section {
+        border-top: 1px solid $dark-primary-color;
+        padding: 1rem 0;
+        margin: 2rem 0 0;
+    }
+}

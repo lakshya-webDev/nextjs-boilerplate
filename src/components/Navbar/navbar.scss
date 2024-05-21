@@ -1,0 +1,97 @@
+@import "../../styles/mixins.scss";
+
+.navbar {
+
+    background: $light-secondary-color;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo {
+        font-family: $font-family-old-standard-bold;
+        font-size: 1.25rem;
+    }
+
+    .menu-icon {
+        display: none;
+        cursor: pointer;
+    }
+
+    .nav-elements {
+        display: flex;
+        align-items: center;
+
+        .navbar-list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                padding: 0.5rem 1rem;
+
+                a {
+                    font-family: $font-family-robot-medium;
+                    font-weight: 500;
+                    text-decoration: none;
+                    color: $dark-secondary-color;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $dark-primary-color;
+                    }
+                }
+            }
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+
+    @include mobile {
+        .menu-icon {
+            display: block;
+        }
+
+        .nav-elements {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+
+            &.active {
+                display: flex;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: $light-secondary-color;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                z-index: -1;
+            }
+
+            .navbar-list {
+                flex-direction: column;
+
+                li {
+                    padding: 1rem 0;
+                }
+            }
+        }
+    }
+}
